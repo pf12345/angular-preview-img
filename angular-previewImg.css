@@ -1,0 +1,196 @@
+.view-image-fs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.view-image-fs .left-show-img {
+    display: table;
+    height: 100%;
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+.view-image-fs .left-show-img img {
+    position: relative;
+    right: 50px;
+    bottom: 60px;
+}
+.view-image-fs .left-show-img div {
+    display: table-cell;
+    vertical-align: middle;
+}
+.view-image-fs .right-img-list {
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    padding: 90px 0 50px 0;
+    box-sizing: border-box;
+    border-left: 1px solid #ddd;
+}
+.view-image-fs .right-img-list ul {
+    height: 100%;
+    overflow: hidden;
+}
+.view-image-fs .right-img-list ul li {
+    text-align: center;
+    margin: 8px 18px;
+    background-color: #fff;
+    cursor: pointer;
+    border: 2px solid #fff;
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+.view-image-fs .right-img-list ul li:first-of-type {
+    border: 2px solid #d73300;
+}
+.view-image-fs .right-img-list ul li.checked {
+    border: 2px solid #d73300;
+}
+.view-image-fs .right-img-list ul li.unchecked {
+    border: 2px solid #fff;
+}
+.view-image-fs .right-img-list ul li.preview-animate {
+    -webkit-transition: 200ms linear all;
+    -moz-transition: 200ms linear all;
+    -o-transition: 200ms linear all;
+    transition: 200ms linear all;
+}
+.view-image-fs .right-img-list ul li img {
+    vertical-align: middle;
+    max-width: 60px;
+}
+.view-image-fs .preview-title {
+    background: url(icon/sep_d.png) repeat-x 0 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #fff;
+    position: relative;
+    z-index: 999;
+    padding-left: 34px;
+    font-size: 20px;
+}
+.view-image-fs .preview-title b {
+    position: absolute;
+    right: 34px;
+    top:15px;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    background: url('icon/arrow-delete.png') center no-repeat;
+}
+.view-image-fs .left-show-img {
+    padding-top: 60px;
+}
+.view-image-fs .right-img-list .up-view,
+.view-image-fs .right-img-list .down-view {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+.view-image-fs .right-img-list .up-view {
+    border-bottom: 1px solid #ddd;
+    top: 60px;
+    background: url('icon/arrow-up.png') center no-repeat;
+}
+.view-image-fs.right-img-list .up-view.unUse {
+    background: url('icon/arrow-up-gray.png') center no-repeat;
+}
+.view-image-fs .right-img-list .down-view {
+    border-top: 1px solid #ddd;
+    bottom: 0;
+    background: url('icon/arrow-down.png') center no-repeat;
+}
+.view-image-fs .right-img-list .down-view.unUse {
+    background: url('icon/arrow-down-gray.png') center no-repeat;
+}
+.view-image-fs .left-show-img .left-view {
+    left: 20px;
+    top: 50%;
+    margin-top: -50px;
+    background: url('icon/arrow-left.png') center no-repeat;
+}
+.view-image-fs .left-show-img .left-view.unUse {
+    background: url('icon/arrow-left-gray.png') center no-repeat;
+}
+.view-image-fs .left-show-img .right-view {
+    right: 120px;
+    top: 50%;
+    margin-top: -50px;
+    background: url('icon/arrow-right.png') center no-repeat;
+}
+.view-image-fs .left-show-img .right-view.unUse {
+    background: url("icon/arrow-right-gray.png") center no-repeat;
+}
+.view-image-fs .left-show-img .left-view,
+.view-image-fs .left-show-img .right-view {
+    width: 60px;
+    height: 100px;
+    position: absolute;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+
+/*------------------------------- single image preview -----------------*/
+.preview-single-img-container {
+    overflow-y: scroll;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.preview-single-img-container,
+.preview-file-mc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    text-align: center;
+}
+.preview-file-mc {
+    background-color: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.preview-single-img-big {
+    position: relative;
+    z-index: 9999;
+    top: 50%;
+}
+.preview-single-img-big img {
+    vertical-align: middle;
+    z-index: 1001;
+    position: relative;
+    background-color: #fff;
+    max-height: 90%;
+}
+
+.ngPreviewAnimate, .PreviewAnimate {
+    -webkit-transition: 300ms linear all;
+    -moz-transition: 300ms linear all;
+    -o-transition: 300ms linear all;
+    transition: 300ms linear all;
+}
+
+.previewImgShow {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.cursor_decrease:hover {
+    cursor: url('/images/content/icon/decrease.png'),pointer;
+}
+
