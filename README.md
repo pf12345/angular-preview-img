@@ -43,7 +43,7 @@ $scope.files = [{
 
 2.$scope.checkedImg (Object)
 
-The default value is $scope.files[0], you can set yourself; it is the big image in the center area.
+The default value is $scope.files[0], you can set it by yourself; it is the big image in the center area.
 
 3.$scope.openPreviewImg (Function)
 
@@ -53,9 +53,17 @@ you can use the function to open the preview image plugin,for example:
 &lt;input class="btn btn-cancel" ng-click="openPreviewImg()" type="button" value="PreviewImg"/&gt;
 </pre>
 
-4.$scope.previewImgTitle (String)
+4.$scope.closePreviewImg (Function)
+
+you can use it to close the preview image plugin. for example:
+
+<b class='icon-close' ng-click="closePreviewImg()"></b>
+
+5.$scope.previewImgTitle (String)
 
 you can use it to set the title in show area.
+
+
 
 ###show single image
 
@@ -78,4 +86,13 @@ $scope.showPreviewSingle = function(index) {
         $scope.openPreviewSingleImg();
         $scope.previewSingleImg = $scope.files[index];
 }
+</pre>
+
+3.$scope.closePreviewSingleImg (Function)
+
+you can use it to close the single image preview, for example:
+
+<pre>
+&lt;b ng-click="closePreviewSingleImg()"&gt;&lt;/b&gt;
+
 </pre>
